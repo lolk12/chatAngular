@@ -1,0 +1,20 @@
+md-form-field{
+  .mat-input-flex{
+    border-bottom: 1px solid #EAEAEA;
+  }
+  .mat-input-placeholder{
+    color: #EAEAEA;
+  }
+}
+.reg-form {
+  width: 100%;
+  md-form-field{
+    margin-top: 20px;
+  }
+}
+.container{
+  min-height: 100vh;
+}
+.full-v{
+  min-height: 100vh;
+}

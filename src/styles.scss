@@ -1,0 +1,20 @@
+@import "assets/stylesheet/bootstrap.min.css";
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css');
+@import "assets/stylesheet/_shadow";
+
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$app-primary: mat-palette($mat-blue-grey, 200);
+$app-warn: mat-palette($mat-red, 400);
+$app-accent: mat-palette($mat-red, 100);
+$app-theme: mat-light-theme($app-primary,$app-accent,$app-warn);
+@include angular-material-theme($app-theme);
+
+
+@import "app/app.component";
+body{
+  background-color: #2e3133;
+  color: #eaeaea;
+}

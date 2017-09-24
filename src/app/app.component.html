@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row justify-content-md-center full-v">
+    <div class="col-md-4 col-12 align-self-center">
+      <form action="">
+        <md-form-field class="reg-form">
+          <input mdInput placeholder="Почта" [formControl]="emailFormControl">
+          <md-error *ngIf="emailFormControl.hasError('pattern')">
+            Пожалуйста введите валидный Email адрес
+          </md-error>
+          <md-error *ngIf="emailFormControl.hasError('required')">
+            Пожалуйста введите почту
+          </md-error>
+        </md-form-field>
+
+        <md-form-field class="reg-form">
+          <input mdInput placeholder="Пароль" [formControl]="passwordFormControl">
+          <md-error *ngIf="passwordFormControl.hasError('required')">
+            Пожалуйста введите пароль
+          </md-error>
+          <md-error *ngIf="passwordFormControl.hasError('minlength') && !passwordFormControl.hasError('required')">
+            Пароль должен содержать больше 5 символов
+          </md-error>
+          <md-error *ngIf="passwordFormControl.hasError('maxlength') && !passwordFormControl.hasError('required') && !passwordFormControl.hasError('minlength')">
+            Пароль не может содержать больше 24 символов
+          </md-error>
+        </md-form-field>
+
+      </form>
+    </div>
+  </div>
+</div>
